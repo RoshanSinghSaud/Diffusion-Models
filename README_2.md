@@ -99,33 +99,4 @@ The noise predictor is a **U-Net**:
 
 The timestep `t` is turned into a **sinusoidal embedding** and fed into each block, so the network always knows how noisy the current image is.
 
-## Project structure
 
-```
-.
-├── model.py        # U-Net + time embedding
-├── diffusion.py    # forward noising + sampling loop
-├── train.py        # training loop
-├── sample.py       # generate images from a trained model
-└── README.md
-```
-*(adjust to match your actual files)*
-
-## Usage
-
-```bash
-# install dependencies
-pip install -r requirements.txt
-
-# train
-python train.py
-
-# generate images
-python sample.py
-```
-
-## References
-
-- Ho et al. — *Denoising Diffusion Probabilistic Models* (2020)
-- Nichol & Dhariwal — *Improved DDPM* (2021) — cosine noise schedule
-- Song et al. — *Score-Based Generative Modeling* — the score / Langevin connection
